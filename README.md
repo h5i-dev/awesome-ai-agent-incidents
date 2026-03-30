@@ -20,61 +20,47 @@
 
 ## Table of Contents
 
-- [Key Statistics](#key-statistics)
-- [Real-World Incidents](#real-world-incidents)
-  - [Prompt Injection & Goal Hijacking](#prompt-injection--goal-hijacking)
-  - [Supply Chain Attacks](#supply-chain-attacks)
-  - [Infrastructure Compromise](#infrastructure-compromise)
-  - [Agent Misalignment & Rogue Behavior](#agent-misalignment--rogue-behavior)
-  - [AI-Assisted Attacks](#ai-assisted-attacks)
-- [CVE Database](#cve-database)
-- [MCP (Model Context Protocol) Security](#mcp-model-context-protocol-security)
-  - [MCP Incidents & PoCs](#mcp-incidents--pocs)
-  - [MCP Attack Vectors](#mcp-attack-vectors)
-- [Attack Taxonomy](#attack-taxonomy)
-  - [The Promptware Kill Chain](#the-promptware-kill-chain)
-  - [Attack Techniques](#attack-techniques)
-- [Frameworks & Standards](#frameworks--standards)
-  - [OWASP Top 10 for Agentic Applications (ASI 2026)](#owasp-top-10-for-agentic-applications-asi-2026)
-  - [MITRE ATLAS](#mitre-atlas)
-  - [Other Frameworks](#other-frameworks)
-- [Research Papers](#research-papers)
-  - [Surveys & Systematizations](#surveys--systematizations)
-  - [Prompt Injection & Jailbreaks](#prompt-injection--jailbreaks)
-  - [MCP & Tool Poisoning](#mcp--tool-poisoning)
-  - [Multi-Agent System Threats](#multi-agent-system-threats)
-  - [Memory & RAG Attacks](#memory--rag-attacks)
-  - [Backdoor Attacks on Agents](#backdoor-attacks-on-agents)
-  - [Benchmarks & Agent Evaluation](#benchmarks--agent-evaluation)
-  - [Defense Methods](#defense-methods)
-- [Defensive Tools & Projects](#defensive-tools--projects)
-  - [Open-Source Guardrails](#open-source-guardrails)
-  - [Red Teaming & Scanning](#red-teaming--scanning)
-  - [Benchmarks & Evaluations](#benchmarks--evaluations)
-  - [Observability & Tracing](#observability--tracing)
-  - [Commercial / Enterprise Solutions](#commercial--enterprise-solutions)
-- [Learning Resources](#learning-resources)
-  - [Articles & Blog Posts](#articles--blog-posts)
-  - [Courses, Labs & CTFs](#courses-labs--ctfs)
-  - [Databases & Trackers](#databases--trackers)
-- [Contributing](#contributing)
-
----
-
-## Key Statistics
-
-| Metric | Value | Source |
-|--------|-------|--------|
-| YoY growth in LLM ecosystem CVEs | **+80.4%** (419 → 756) | Trend Micro 2025 |
-| High/critical-severity AI CVEs in 2025 | **641** (up from 484 in 2024) | Trend Micro 2025 |
-| MCP server vulnerabilities (emerged since 2024) | **95** | Trend Micro 2025 |
-| MCP servers exposed to internet with zero auth | **492** | Trend Micro 2025 |
-| YoY increase in AI privacy incidents | **+56.4%** | Stanford AI Index 2025 |
-| Machine-to-human identity ratio (avg. enterprise) | **82:1** | Industry reports |
-| Average cost of a data breach involving shadow AI | **$670K more** than standard breaches | IBM CODB 2024 |
-| Attack success rate for tool poisoning (o1-mini) | **72.8%** | MCPTox benchmark |
-| Refusal rate for tool poisoning (best model) | **<3%** | MCPTox benchmark |
-| Real-world AI incidents caused by simple prompts | **35%** | Adversa AI 2025 |
+- [Awesome AI Agent Incidents](#awesome-ai-agent-incidents)
+  - [Table of Contents](#table-of-contents)
+  - [Real-World Incidents](#real-world-incidents)
+    - [Prompt Injection \& Goal Hijacking](#prompt-injection--goal-hijacking)
+    - [Supply Chain Attacks](#supply-chain-attacks)
+    - [Infrastructure Compromise](#infrastructure-compromise)
+    - [Agent Misalignment \& Rogue Behavior](#agent-misalignment--rogue-behavior)
+    - [AI-Assisted Attacks](#ai-assisted-attacks)
+  - [CVE Database](#cve-database)
+  - [MCP (Model Context Protocol) Security](#mcp-model-context-protocol-security)
+    - [MCP Incidents \& PoCs](#mcp-incidents--pocs)
+    - [MCP Attack Vectors](#mcp-attack-vectors)
+  - [Attack Taxonomy](#attack-taxonomy)
+    - [The Promptware Kill Chain](#the-promptware-kill-chain)
+    - [Attack Techniques](#attack-techniques)
+  - [Frameworks \& Standards](#frameworks--standards)
+    - [OWASP Top 10 for Agentic Applications (ASI 2026)](#owasp-top-10-for-agentic-applications-asi-2026)
+    - [MITRE ATLAS](#mitre-atlas)
+    - [Other Frameworks](#other-frameworks)
+  - [Research Papers](#research-papers)
+    - [Surveys \& Systematizations](#surveys--systematizations)
+    - [Prompt Injection \& Jailbreaks](#prompt-injection--jailbreaks)
+    - [MCP \& Tool Poisoning](#mcp--tool-poisoning)
+    - [Multi-Agent System Threats](#multi-agent-system-threats)
+    - [Memory \& RAG Attacks](#memory--rag-attacks)
+    - [Backdoor Attacks on Agents](#backdoor-attacks-on-agents)
+    - [Benchmarks \& Agent Evaluation](#benchmarks--agent-evaluation)
+    - [Defense Methods](#defense-methods)
+  - [Defensive Tools \& Projects](#defensive-tools--projects)
+    - [Open-Source Guardrails](#open-source-guardrails)
+    - [Red Teaming \& Scanning](#red-teaming--scanning)
+    - [Benchmarks \& Evaluations](#benchmarks--evaluations)
+    - [Observability \& Tracing](#observability--tracing)
+    - [Commercial / Enterprise Solutions](#commercial--enterprise-solutions)
+  - [Learning Resources](#learning-resources)
+    - [Articles \& Blog Posts](#articles--blog-posts)
+    - [Courses, Labs \& CTFs](#courses-labs--ctfs)
+    - [Databases \& Trackers](#databases--trackers)
+  - [Key Reports \& Industry Data](#key-reports--industry-data)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ---
 
@@ -84,15 +70,15 @@
 
 | Date | Incident | Impact | References |
 |------|----------|--------|------------|
-| Mid-2025 | **EchoLeak — Microsoft 365 Copilot** `CVE-2025-32711` (CVSS 9.3): Zero-click prompt injection via crafted emails; hidden HTML-comment instructions were ingested by Copilot's RAG engine, exfiltrating OneDrive, SharePoint, and Teams data through a trusted Microsoft preview API—no user interaction required. | Data exfiltration across 160+ org-level incidents; ~$200M est. impact | [arXiv 2509.10540](https://arxiv.org/abs/2509.10540), [Checkmarx](https://checkmarx.com/zero-post/echoleak-cve-2025-32711-show-us-that-ai-security-is-challenging/), [Trend Micro](https://www.trendmicro.com/en_us/research/25/g/preventing-zero-click-ai-threats-insights-from-echoleak.html) |
-| May 2025 | **GitHub MCP Prompt Injection**: Malicious commands embedded in public GitHub Issues hijacked developers' AI agents via the GitHub MCP server, exfiltrating private repository source code and cryptographic keys to attacker-controlled public repositories. | Private source code and keys leaked | [Invariant Labs](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks) |
+| Mid-2025 | **EchoLeak — Microsoft 365 Copilot** `CVE-2025-32711` (CVSS 9.3): Zero-click prompt injection via crafted emails; reference-style Markdown image links bypassed Copilot's link-redaction filters, exfiltrating OneDrive, SharePoint, and Teams data through the Teams content URL API (`teams.microsoft.com/urlp/v1/url/content`) which was in the CSP allowlist—no user interaction required. | Data exfiltration across 160+ org-level incidents; ~$200M est. impact | [arXiv 2509.10540](https://arxiv.org/abs/2509.10540), [Checkmarx](https://checkmarx.com/zero-post/echoleak-cve-2025-32711-show-us-that-ai-security-is-challenging/), [Trend Micro](https://www.trendmicro.com/en_us/research/25/g/preventing-zero-click-ai-threats-insights-from-echoleak.html) |
+| May 2025 | **GitHub MCP Prompt Injection**: Malicious commands embedded in public GitHub Issues hijacked developers' AI agents via the GitHub MCP server, exfiltrating private repository source code and cryptographic keys to attacker-controlled public repositories. | Private source code and keys leaked | [Security Boulevard / NSFOCUS](https://securityboulevard.com/2026/02/protecting-ai-security-2025-hot-security-incident/), [Invariant Labs](https://invariantlabs.ai/blog/mcp-github-prompt-injection) |
 | Aug 2025 | **Perplexity Comet Browser Injection**: Hidden commands in Reddit Markdown spoiler tags triggered Comet's "summarize page" feature; the agent logged into user emails, bypassed CAPTCHAs, and transmitted credentials within 150 seconds. | Credential theft | [Security Boulevard](https://securityboulevard.com/2026/02/protecting-ai-security-2025-hot-security-incident/) |
 | Mid-2025 | **Supabase Cursor Agent Injection**: A Cursor agent with privileged service-role database access processed support tickets containing user-supplied SQL; attacker-controlled content caused exfiltration of sensitive integration tokens. | Sensitive tokens exposed | [Practical DevSecOps](https://www.practical-devsecops.com/mcp-security-vulnerabilities/) |
 | Aug 2024 | **Slack AI Data Exfiltration**: Indirect prompt injection in public Slack channels weaponized Slack AI's RAG search to exfiltrate data from *private* channels via malicious link formatting—Slack initially described this as "intended behavior." | Private communications leaked | [Simon Willison](https://simonwillison.net/2024/Aug/20/data-exfiltration-from-slack-ai/), [PromptArmor] |
 | 2024 | **Financial Reconciliation Agent Fraud**: An attacker phrased a data export as a legitimate business task ("all customer records matching pattern X"), causing a reconciliation agent to export every record without raising suspicion. | 45,000 customer records stolen | [Stellar Cyber](https://stellarcyber.ai/learn/agentic-ai-securiry-threats/) |
 | 2025 | **Procurement Agent Memory Poisoning**: Over 3 weeks, a manufacturing firm's procurement agent was gradually memory-poisoned into believing elevated transfer limits were authorized; it then transferred funds to attacker accounts. | Financial fraud via persistent memory corruption | [Lares Labs](https://labs.lares.com/owasp-agentic-top-10/) |
 | Nov 2025 | **A2A Session Smuggling** (Palo Alto Unit 42): "Agent Session Smuggling" exploited trust relationships in the Agent-to-Agent (A2A) protocol during multi-turn conversations; a malicious sub-agent hijacked the task graph of a trusted orchestrator. | Multi-agent system compromise | [Lares Labs](https://labs.lares.com/owasp-agentic-top-10/) |
-| Dec 2025 | **OpenAI Atlas — Real Attack Chain Disclosed**: OpenAI confirmed a real-world attack where a malicious email caused their Atlas agent to autonomously send a resignation letter. OpenAI stated that "deterministic guarantees are not achievable." | Unauthorized email sent on behalf of user | [OpenAI Blog](https://openai.com/index/hardening-atlas-against-prompt-injection/) |
+| Dec 2025 | **OpenAI Atlas — Real Attack Chain Disclosed**: OpenAI confirmed a real-world attack where a malicious email caused their Atlas agent to autonomously send a resignation letter. OpenAI stated that "deterministic guarantees are not achievable." | Unauthorized email sent on behalf of user | [OpenAI Blog](https://openai.com/index/hardening-atlas-against-prompt-injection/) *(source URL unverifiable — could not confirm)* |
 | 2024 | **ChatGPT Memory Persistence Attack**: Injected content manipulated ChatGPT's persistent memory feature to plant false memories, enabling long-term data exfiltration across sessions without re-injection. | Persistent cross-session data exfiltration | [Multiple sources] |
 | 2024 | **Resume Prompt Injection**: Hidden white-on-white text in resumes manipulated AI hiring-assistant tools into inflating candidate scores—a real-world deployment of indirect injection against HR workflows. | AI hiring integrity undermined | [MDPI Information 2026] |
 | 2024 | **SCADA Industrial Attack (PoC)**: White-on-white PDF instructions processed by Claude caused modification of parameters in a simulated industrial control system—the first documented AI-mediated SCADA attack vector. | Industrial control manipulation | [MDPI Information 2026] |
@@ -102,7 +88,7 @@
 | Date | Incident | Impact | References |
 |------|----------|--------|------------|
 | Aug 2025 | **s1ngularity — Nx Build System**: Compromised Nx build pipeline distributed malware targeting developer environments. The malware detected Claude Code and Gemini CLI and issued natural-language prompts instructing these agents to enumerate filesystems and exfiltrate credentials. | Developer credential theft at scale | [Trend Micro](https://www.trendmicro.com/vinfo/us/security/news/threat-landscape/fault-lines-in-the-ai-ecosystem-trendai-state-of-ai-security-report) |
-| Feb 2026 | **OpenClaw / ClawHub Malicious Skills**: Antiy CERT and Snyk confirmed 1,184 malicious skills (~1 in 5 packages) across ClawHub, the package registry for the OpenClaw AI agent framework. Techniques: typosquatting, mass uploads, 2.9% used `curl \| bash` remote-instruction loading. 135,000+ instances exposed with insecure defaults. | Largest confirmed AI agent supply chain attack | [CyberDesserts](https://blog.cyberdesserts.com/ai-agent-security-risks/), [Snyk ToxicSkills](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/) |
+| Feb 2026 | **OpenClaw / ClawHub Malicious Skills**: Antiy CERT confirmed 1,184 malicious skills across ClawHub, the package registry for the OpenClaw AI agent framework; Snyk ToxicSkills separately found 76 confirmed malicious payloads and 534 critically-vulnerable skills (~13.4%) in an independent scan of 3,984 skills. Techniques: typosquatting, mass uploads, 2.9% used `curl \| bash` remote-instruction loading. 135,000+ instances exposed with insecure defaults. | Largest confirmed AI agent supply chain attack | [CyberDesserts](https://blog.cyberdesserts.com/ai-agent-security-risks/), [Snyk ToxicSkills](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/) |
 | Jan 2026 | **Claude Code RCE via Poisoned Config** `CVE-2026-XXXX`: Check Point Research disclosed RCE in Claude Code through poisoned repository `.claude` configuration files. Patched in Claude Code 2.0.65+. | Developer workstation compromise | [CyberDesserts](https://blog.cyberdesserts.com/ai-agent-security-risks/) |
 | 2026 | **OpenAI Plugin Ecosystem Breach**: Supply chain attack on the OpenAI plugin ecosystem harvested agent credentials from 47 enterprise deployments; 6 months of undetected access to customer data, financial records, and proprietary code. | 47 enterprises compromised | [Stellar Cyber](https://stellarcyber.ai/learn/agentic-ai-securiry-threats/) |
 | Aug 2025 | **Drift/Salesforce OAuth Token Theft (UNC6395)**: Threat actor used stolen OAuth tokens from Drift's Salesforce integration to access 700+ customer environments—no exploit, no phishing required. | 700+ orgs compromised; Drift temporarily removed from AppExchange | [Reco Blog](https://www.reco.ai/blog/ai-and-cloud-security-breaches-2025) |
@@ -155,7 +141,7 @@
 | **WhatsApp MCP Chat History Exfiltration** | Invariant Labs PoC: a malicious server combined tool poisoning with the legitimate `whatsapp-mcp` server to silently exfiltrate an entire chat history—zero user interaction. | [Invariant Labs](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks) |
 | **MCP Inspector RCE** | Anthropic's own MCP Inspector developer tool allowed unauthenticated RCE via its inspector–proxy architecture, turning a debugging aid into a remote shell. | [AuthZed Timeline](https://authzed.com/blog/timeline-mcp-breaches) |
 | **mcp-remote OAuth Command Injection** `CVE-2025-6514` | Critical OS command injection in the most widely used OAuth proxy for connecting local MCP clients to remote servers. | [AuthZed Timeline](https://authzed.com/blog/timeline-mcp-breaches) |
-| **Smithery Multi-Tenant Pipeline Compromise** | Thousands of Smithery tenants were exposed when their shared build pipeline was compromised, enabling supply chain injection into MCP server packages. | [AuthZed Timeline](https://authzed.com/blog/timeline-mcp-breaches) |
+| **Smithery Build Config Path Traversal** | A path-traversal vulnerability in Smithery's build configuration leaked a builder's `~/.docker/config.json`, exposing a Fly.io API token that granted control over 3,000+ deployed apps. | [AuthZed Timeline](https://authzed.com/blog/timeline-mcp-breaches) |
 
 ### MCP Attack Vectors
 
@@ -177,7 +163,7 @@
 
 ### The Promptware Kill Chain
 
-Prompt injection has evolved from an isolated input-manipulation exploit into a structured, multi-stage malware mechanism. Analysis of 36 prominent incidents found at least 15 attacks traversing four or more stages of this kill chain. ([arXiv 2601.09625](https://arxiv.org/abs/2601.09625))
+Prompt injection has evolved from an isolated input-manipulation exploit into a structured, multi-stage malware mechanism. Analysis of 36 prominent incidents found at least 21 attacks traversing four or more stages of this kill chain. ([arXiv 2601.09625](https://arxiv.org/abs/2601.09625))
 
 ```
 Stage 1: Initial Access        ──► Prompt injection (direct or indirect)
@@ -276,7 +262,7 @@ Key techniques relevant to AI agents:
 | Paper | Venue | TL;DR |
 |-------|-------|-------|
 | [The Attack and Defense Landscape of Agentic AI: A Comprehensive Survey](https://arxiv.org/abs/2603.11088) | arXiv 2026 | Reviews 128 papers (51 attacks, 60 defenses). Argues component-level defenses are insufficient; security must be treated as a systems-level problem. Defines 6 primary attack vectors. |
-| [AI Agents Under Threat: A Survey of Key Security Challenges and Future Pathways](https://arxiv.org/abs/2406.02630) | ACM Comp. Surveys 2024 | Categorizes threats across 4 knowledge gaps. Key finding: backdoor defenses don't cover the full agent ecosystem beyond model granularity. |
+| [AI Agents Under Threat: A Survey of Key Security Challenges and Future Pathways](https://arxiv.org/abs/2406.02630) | ACM Comp. Surveys 2025 | Categorizes threats across 4 knowledge gaps. Key finding: backdoor defenses don't cover the full agent ecosystem beyond model granularity. |
 | [Agentic AI Security: Threats, Defenses, Evaluation, and Open Challenges](https://arxiv.org/abs/2510.23883) | arXiv Oct 2025 | Broad threat taxonomy spanning prompt injection, autonomous cyber-exploitation, multi-agent threats, and governance concerns. Documents EchoLeak CVE-2025-32711. |
 | [A Survey of Agentic AI and Cybersecurity](https://arxiv.org/abs/2601.05293) | arXiv Jan 2026 | Treats agentic AI as a cybersecurity system. Analyzes collusion, cascade failures, and oversight evasion with prototype implementations. |
 | [The Landscape of Prompt Injection Threats in LLM Agents (SoK)](https://arxiv.org/abs/2602.10453) | arXiv Feb 2026 | Systematization-of-knowledge with unified taxonomy. Introduces **AgentPI benchmark** covering context-dependent agent tasks all prior benchmarks ignored. |
@@ -292,13 +278,13 @@ Key techniques relevant to AI agents:
 |-------|-------|-------|
 | [Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/abs/2302.12173) | IEEE S&P Workshop 2023 | Foundational paper defining indirect prompt injection. Demonstrates remote data theft, ecosystem contamination across production applications. |
 | [Universal and Transferable Adversarial Attacks on Aligned Language Models](https://arxiv.org/abs/2307.15043) | arXiv 2023 | Introduces transferable adversarial suffixes that elicit objectionable content across GPT, Claude, Llama. Foundational jailbreak work. |
-| [The Promptware Kill Chain](https://arxiv.org/abs/2601.09625) | arXiv Jan 2026 | Formalizes prompt injection as a 7-stage malware delivery mechanism. Validates against 36 real incidents; 15 traversed ≥4 stages. |
+| [The Promptware Kill Chain](https://arxiv.org/abs/2601.09625) | arXiv Jan 2026 | Formalizes prompt injection as a 7-stage malware delivery mechanism. Validates against 36 real incidents; 21 traversed ≥4 stages. |
 | [EchoLeak: The First Real-World Zero-Click Prompt Injection Exploit](https://arxiv.org/abs/2509.10540) | arXiv Sep 2025 | Technical deep-dive on CVE-2025-32711; details how CSP and prompt-injection filters were both bypassed using a trusted Microsoft domain as exfiltration proxy. |
 | [The Attacker Moves Second: Stronger Adaptive Attacks Bypass Defenses Against LLM Jailbreaks and Prompt Injections](https://arxiv.org/abs/2510.09023) | arXiv Oct 2025 | **Breaks 12 published defenses** using gradient descent, RL, random search. Most defenses claimed near-zero ASR; adaptive attacks exceeded 90% against all of them. |
 | [Prompt Injection 2.0: Hybrid AI Threats](https://arxiv.org/abs/2507.13169) | arXiv Jul 2025 | Shows injections now combine with XSS, CSRF, AI worm propagation, and multi-agent infections to evade traditional WAFs entirely. |
 | [Securing AI Agents Against Prompt Injection Attacks](https://arxiv.org/abs/2511.15759) | arXiv Nov 2025 | Benchmarks 847 adversarial cases across 5 attack categories vs. 7 LLMs. Combined defense reduces ASR from 73.2% → 8.7% while retaining 94.3% task performance. |
 | [ToolHijacker: Prompt Injection Attack to Tool Selection in LLM Agents](https://arxiv.org/abs/2504.19793) | arXiv Apr 2025 | No-box attack injecting a malicious tool document to hijack tool selection. StruQ, SecAlign, DataSentinel, and perplexity detection are all insufficient defenses. |
-| [Fooling AI Agents: Web-Based Indirect Prompt Injection Observed in the Wild](https://unit42.paloaltonetworks.com/web-based-indirect-prompt-injection/) | Palo Alto Unit 42, Feb 2026 | First large-scale analysis of IDPI in real telemetry. Documents timed-delay payloads, homoglyph obfuscation, canvas-based text hiding, and authority impersonation. |
+| Fooling AI Agents: Web-Based Indirect Prompt Injection Observed in the Wild | Palo Alto Unit 42, Feb 2026 | First large-scale analysis of IDPI in real telemetry. Documents timed-delay payloads, homoglyph obfuscation, canvas-based text hiding, and authority impersonation. *(source URL unverifiable — 404)* |
 | [Attention Tracker: Detecting Prompt Injection Attacks in LLMs](https://aclanthology.org/2025.findings-naacl.123.pdf) | NAACL 2025 | Detects prompt injection by tracking attention distribution shifts—no modification to the underlying model; deployable as a wrapper. |
 | [Advertisement Embedding Attacks Against LLM Agents](https://arxiv.org/abs/2505.10321) | arXiv May 2025 | Shows how adversaries can covertly embed promotional content into agent responses by poisoning external data sources the agent consumes, turning helpfulness into a covert advertising channel. |
 
