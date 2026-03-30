@@ -118,16 +118,16 @@
 
 ## CVE Database
 
-| CVE | Product / Component | CVSS | Description |
-|-----|---------------------|------|-------------|
-| CVE-2025-32711 | Microsoft 365 Copilot (EchoLeak) | 9.3 | Zero-click prompt injection enabling data exfiltration from OneDrive/SharePoint/Teams via markdown-rendered image URL leakage. |
-| CVE-2025-53773 | GitHub Copilot | 9.6 | Remote code execution via prompt injection in agentic Copilot workflows. |
-| CVE-2025-59944 | Cursor | High | Case-sensitivity bug in protected file path allowed attacker influence over agentic behavior, escalating to RCE. |
-| CVE-2025-3248 | Langflow | Critical | Unauthenticated RCE via the code-validation endpoint; ~2-year window from discovery to fix. |
-| CVE-2025-34291 | Langflow | 9.4 | Account takeover + RCE via overly permissive CORS, missing CSRF protection, and the code-validation endpoint. |
-| CVE-2025-47241 | Browser Use | High | URL parsing flaw in `allowed_domains` whitelist; attacker can craft `https://allowed.com@malicious.com/` to bypass domain restrictions. |
-| CVE-2025-6514 | mcp-remote | Critical | OS command injection in this popular MCP OAuth proxy. |
-| CVE-2023-48022 | Ray Framework | Critical | Unauthenticated RCE exploited at scale (230K+ clusters) using AI-generated attack scripts in 2025. |
+| CVE | Product / Component | CVSS | Description | References |
+|-----|---------------------|------|-------------|------------|
+| [CVE-2025-32711](https://nvd.nist.gov/vuln/detail/CVE-2025-32711) | Microsoft 365 Copilot (EchoLeak) | 9.3 (Critical, Microsoft CNA) | Zero-click prompt injection enabling data exfiltration from OneDrive/SharePoint/Teams via reference-style Markdown image URL leakage through the Teams content URL proxy. | [NVD](https://nvd.nist.gov/vuln/detail/CVE-2025-32711), [MSRC](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-32711) |
+| [CVE-2025-53773](https://nvd.nist.gov/vuln/detail/CVE-2025-53773) | GitHub Copilot + Visual Studio 2022 | 7.8 (High, AV:L) | Local code execution via command injection triggered through prompt injection in GitHub Copilot / Visual Studio 2022 (v17.14.0–17.14.11); requires user interaction. | [NVD](https://nvd.nist.gov/vuln/detail/CVE-2025-53773), [MSRC](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53773) |
+| [CVE-2025-59944](https://nvd.nist.gov/vuln/detail/CVE-2025-59944) | Cursor (≤ v1.6.23) | 9.8 (Critical, NIST) / 8.0 (High, GitHub CNA) | Case-sensitivity flaw in protected file-path checks allows prompt injection to overwrite `/.cursor/mcp.json` on case-insensitive filesystems, escalating to RCE. Fixed in v1.7. | [NVD](https://nvd.nist.gov/vuln/detail/CVE-2025-59944), [GHSA](https://github.com/advisories?query=CVE-2025-59944) |
+| [CVE-2025-3248](https://nvd.nist.gov/vuln/detail/CVE-2025-3248) | Langflow (< v1.3.0) | 9.8 (Critical) | Unauthenticated RCE via the `/api/v1/validate/code` endpoint; added to CISA KEV May 2025. | [NVD](https://nvd.nist.gov/vuln/detail/CVE-2025-3248) |
+| [CVE-2025-34291](https://nvd.nist.gov/vuln/detail/CVE-2025-34291) | Langflow (≤ v1.6.9) | 9.4 (Critical, CNA) / 8.8 (High, NIST) | Account takeover + RCE via overly permissive CORS (`allow_origins='*'` + `allow_credentials=True`) combined with `SameSite=None` refresh token cookie, enabling cross-origin credential theft leading to code-execution endpoint access. | [NVD](https://nvd.nist.gov/vuln/detail/CVE-2025-34291), [GitHub](https://github.com/langflow-ai/langflow) |
+| [CVE-2025-47241](https://nvd.nist.gov/vuln/detail/CVE-2025-47241) | Browser Use (< v0.1.45) | 9.3 (Critical, GHSA) | URL parsing flaw in `allowed_domains` whitelist: the parser splits on `:` to extract the domain, allowing an attacker to craft `https://allowed.com:pass@malicious.com/` to bypass domain restrictions entirely. | [NVD](https://nvd.nist.gov/vuln/detail/CVE-2025-47241), [GHSA-x39x-9qw5-ghrf](https://github.com/advisories/GHSA-x39x-9qw5-ghrf) |
+| [CVE-2025-6514](https://nvd.nist.gov/vuln/detail/CVE-2025-6514) | mcp-remote | 9.6 (Critical, JFrog CNA) | OS command injection when connecting to an untrusted MCP server via a crafted `authorization_endpoint` URL in the OAuth response. | [NVD](https://nvd.nist.gov/vuln/detail/CVE-2025-6514) |
+| [CVE-2023-48022](https://nvd.nist.gov/vuln/detail/CVE-2023-48022) | Anyscale Ray (v2.6.3 / v2.8.0) | 9.8 (Critical, Disputed) | Unauthenticated RCE via the job submission API; vendor disputes severity noting Ray is not designed for untrusted network exposure. Exploited at scale (230K+ clusters) using AI-generated attack scripts in 2025. | [NVD](https://nvd.nist.gov/vuln/detail/CVE-2023-48022) |
 
 ---
 
