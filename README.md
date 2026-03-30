@@ -110,7 +110,7 @@
 
 | Date | Incident | Impact | References |
 |------|----------|--------|------------|
-| Nov 2025 | **Chinese State-Sponsored Claude Code Campaign**: Anthropic confirmed that a Chinese APT group used Claude Code to attempt infiltration of ~30 global targets across tech, finance, and chemical manufacturing. 80–90% of tactical operations (scanning, exploit crafting, multi-step infiltration) were executed autonomously by the agents. | First documented large-scale AI-agent-driven cyberattack | [Anthropic disclosure], [Reddit r/cybersecurity analysis](https://www.reddit.com/r/cybersecurity/comments/1r79rye/) |
+| Nov 2025 | **Chinese State-Sponsored Claude Code Campaign**: Anthropic confirmed that a Chinese APT group used Claude Code to attempt infiltration of ~30 global targets across tech, finance, and chemical manufacturing. 80–90% of tactical operations (scanning, exploit crafting, multi-step infiltration) were executed autonomously by the agents. | First documented large-scale AI-agent-driven cyberattack | [Anthropic disclosure], [BBC](https://www.bbc.com/news/articles/cx2lzmygr84o) |
 
 ---
 
