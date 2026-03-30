@@ -444,13 +444,13 @@ Key techniques relevant to AI agents:
 | [PromptTrace](https://prompttrace.airedlab.com/) | CTF | 7 injection labs + 15-level Gauntlet CTF; unique Context Trace shows full prompt stack in real-time |
 | [Gandalf](https://gandalf.lakera.ai/) | CTF | 8-level prompt injection challenge by Lakera; classic resource for learning defense evasion |
 | [FinBot Agentic AI CTF](https://genai.owasp.org/resource/finbot-agentic-ai-capture-the-flag-ctf-application/) | CTF | OWASP's financial services agentic AI CTF with real-world vulnerability scenarios |
-| [CrowdStrike AI Unlocked](https://www.crowdstrike.com/en-us/blog/introducing-ai-unlocked-interactive-prompt-injection-challenge/) | CTF | Injection challenges against progressively capable agents; built by Counter Adversary Operations |
-| [Damn Vulnerable LLM Agent](https://github.com/WithSecureLabs/damn-vulnerable-llm-agent) | Lab | LangChain-based ReAct agent with intentionally exploitable injection paths; lets you observe how hijacked thoughts propagate through the agent loop |
+| [CrowdStrike AI Unlocked](https://www.crowdstrike.com/en-us/blog/introducing-ai-unlocked-interactive-prompt-injection-challenge/) | CTF | Three-room injection challenges with escalating difficulty |
+| [Damn Vulnerable LLM Agent](https://github.com/ReversecLabs/damn-vulnerable-llm-agent) | Lab | LangChain-based ReAct agent with intentionally exploitable injection paths; lets you observe how hijacked thoughts propagate through the agent loop |
 | [Damn Vulnerable MCP Server](https://github.com/harishsg993010/damn-vulnerable-MCP-server) | Lab | Deliberately vulnerable MCP server for learning MCP pentesting |
 | [vulnerable-mcp-servers-lab](https://github.com/appsecco/vulnerable-mcp-servers-lab) | Lab | Collection of vulnerable MCP servers by Appsecco |
 | [Microsoft AI Red Teaming Playground](https://github.com/microsoft/AI-Red-Teaming-Playground-Labs) | Lab | Microsoft's AI red teaming training infrastructure |
-| [ai-prompt-ctf](https://github.com/c-goosen/ai-prompt-ctf) | CTF | Targets the full agentic stack: RAG retrieval, function calling, and ReAct loops via LlamaIndex, ChromaDB, GPT-4o, and Llama 3.2 — covers indirect injection paths most CTFs skip |
-| [OWASP WrongSecrets LLM](https://wrongsecrets.herokuapp.com/challenge/32) | Lab | OWASP's LLM security challenge |
+| [ai-prompt-ctf](https://github.com/c-goosen/ai-prompt-ctf) | CTF | Targets the full agentic stack: RAG retrieval, function calling, and ReAct loops — covers indirect injection paths most CTFs skip |
+| [OWASP WrongSecrets LLM](https://wrongsecrets.herokuapp.com/challenge/32) | Lab | OWASP's LLM security challenge (link may be unavailable) |
 | [Google AI Red Team Guide](https://services.google.com/fh/files/blogs/google_ai_red_team_digital_final.pdf) | Guide | Google's walkthrough of hacking AI systems |
 
 ### Databases & Trackers
