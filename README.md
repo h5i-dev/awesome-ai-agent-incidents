@@ -14,7 +14,7 @@
 
 ---
 
-> **The Lethal Trifecta** (Simon Willison): An AI agent is *exploitable by design* when it simultaneously (1) has access to private/sensitive data, (2) processes untrusted external content, and (3) can communicate externally. Most production agents satisfy all three conditions.
+> Incidents like these raise a harder question for teams shipping AI-generated code: *do you actually know what your agent did?* We are building **[h5i](https://github.com/Koukyosyumei/h5i)** to answer it — a Git sidecar that records every prompt, decision, and uncertainty signal alongside the diff, so you can audit what the AI touched, catch credential leaks before they land, and resume sessions without losing context.
 
 ---
 
