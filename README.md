@@ -47,6 +47,7 @@
     - [Memory \& RAG Attacks](#memory--rag-attacks)
     - [Backdoor Attacks on Agents](#backdoor-attacks-on-agents)
     - [Benchmarks \& Agent Evaluation](#benchmarks--agent-evaluation)
+    - [OpenClaw Security](#openclaw-security)
     - [Defense Methods](#defense-methods)
   - [Defensive Tools \& Projects](#defensive-tools--projects)
     - [Open-Source Guardrails](#open-source-guardrails)
@@ -331,6 +332,27 @@ Key techniques relevant to AI agents:
 | [SafeArena: Evaluating the Safety of Autonomous Web Agents](https://arxiv.org/abs/2503.04957) | arXiv Mar 2025 | 500 web tasks (250 safe, 250 harmful) across 5 harm categories. GPT-4o completed 34.7% of harmful requests. Introduces the Agent Risk Assessment (ARIA) framework with 4 risk levels. |
 | [R-Judge: Benchmarking Safety Risk Awareness for LLM Agents](https://arxiv.org/abs/2401.10019) | EMNLP Findings 2024 | 569 multi-turn agent interaction records across 27 risk scenarios and 10 risk types. Best model (GPT-4o) achieves only 74.42% risk-awareness accuracy—well short of human-level performance. |
 | [AgentDyn: A Dynamic Open-Ended Benchmark for Evaluating Prompt Injection Attacks](https://arxiv.org/abs/2602.03117) | arXiv Feb 2026 | Extends AgentDojo by adding dynamic open-ended tasks, helpful distractor instructions, and complex user goals. Tests 10 defenses; finds most defenses substantially degraded on realistic tasks. |
+
+### OpenClaw Security
+
+A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework, prompted by the **ClawHub supply chain incident** (1,184 malicious skills confirmed by Antiy CERT). Papers span attacks, defenses, red-teaming frameworks, and benchmarks — making OpenClaw one of the most thoroughly studied agentic security case studies to date.
+
+| Paper | Venue | TL;DR |
+|-------|-------|-------|
+| [Formal Analysis and Supply Chain Security for Agentic AI Skills](https://arxiv.org/abs/2603.00195) | arXiv Mar 2026 | Introduces **SkillFortify**: Dolev-Yao attacker model + static analysis + capability sandboxing + SAT-based dependency resolution. Simulates "ClawHavoc" (1,200+ malicious skills). 96.95% F1, 100% precision, zero false positives on 540-skill benchmark. |
+| [ClawWorm: Self-Propagating Attacks Across LLM Agent Ecosystems](https://arxiv.org/abs/2603.15727) | arXiv Mar 2026 | First self-replicating worm against OpenClaw: single message triggers autonomous infection, hijacks configs for persistence, propagates to peer agents. ~64.5% success rate across 1,800 trials on 4 LLM backends; skill supply chains are universally vulnerable. |
+| [Taming OpenClaw: Security Analysis and Mitigation of Autonomous LLM Agent Threats](https://arxiv.org/abs/2603.11619) | arXiv Mar 2026 | Systematic study of compound threats (indirect prompt injection, skill supply chain contamination, memory poisoning, intent drift). Proposes a five-layer lifecycle security framework; argues point-based defenses fail against cross-temporal, multi-stage attacks. |
+| [From Assistant to Double Agent: Formalizing and Benchmarking Attacks on OpenClaw (PASB)](https://arxiv.org/abs/2602.08412) | arXiv Feb 2026 | Introduces **PASB** (Personalized Agent Security Bench), a security evaluation framework with realistic tools and extended interactions. Uncovers critical weaknesses at user prompt processing, tool usage, and memory retrieval stages — gaps missed by synthetic benchmarks. |
+| [ClawTrap: A MITM-Based Red-Teaming Framework for Real-World OpenClaw Security Evaluation](https://arxiv.org/abs/2603.18762) | arXiv Mar 2026 | MITM red-teaming via Static HTML Replacement, Iframe Popup Injection, and Dynamic Content Modification. Less capable models accept tampered data; more capable models show greater resilience. Argues sandbox evaluations miss real-world attack surfaces. |
+| [Uncovering Security Threats and Architecting Defenses in Autonomous Agents: A Case Study of OpenClaw](https://arxiv.org/abs/2603.12644) | arXiv Mar 2026 | Identifies prompt-injection-driven RCE, sequential tool attack chains, context amnesia, and supply chain contamination under a tri-layered risk taxonomy. Proposes **FASA** (Full-Lifecycle Agent Security Architecture) with zero-trust execution and dynamic intent verification; implements as **Project ClawGuard**. |
+| [Don't Let the Claw Grip Your Hand: A Security Analysis and Defense Framework for OpenClaw](https://arxiv.org/abs/2603.10387) | arXiv Mar 2026 | Tests 47 adversarial scenarios across 6 attack categories; native defenses achieve only 17% defense rate. Human-in-the-Loop (HITL) intervention intercepted 8 severe attacks that bypassed all native defenses. Combined HITL + native raises effectiveness to 19–92%. |
+| [Clawdrain: Exploiting Tool-Calling Chains for Stealthy Token Exhaustion in OpenClaw Agents](https://arxiv.org/abs/2603.00902) | arXiv Mar 2026 | Novel DoS attack inducing "Segmented Verification Protocol" via tool-calling chains — achieves 6–9× token amplification. Also identifies prompt bloat, persistent tool-output pollution, cron/heartbeat amplification, and behavioral instruction injection in production deployments. |
+| [Agent Privilege Separation in OpenClaw: A Structural Defense Against Prompt Injection](https://arxiv.org/abs/2603.13424) | arXiv Mar 2026 | Two-part structural defense: agent privilege separation + tool partitioning + JSON formatting to strip persuasive framing. Tested against **649 successful attacks** from Microsoft LLMail-Inject benchmark — achieves **0% attack success rate**. Isolation is the dominant mechanism. |
+| [Defensible Design for OpenClaw: Securing Autonomous Tool-Invoking Agents](https://arxiv.org/abs/2603.13151) | arXiv Mar 2026 | Argues that untrusted inputs + autonomous action + extensibility + privileged access create systemic risks no single mitigation can address. Proposes secure engineering principles, a risk taxonomy, and a research roadmap for institutionalizing safety throughout agent development. |
+| [OpenClaw PRISM: A Zero-Fork, Defense-in-Depth Runtime Security Layer](https://arxiv.org/abs/2603.11853) | arXiv Mar 2026 | In-process plugin + optional sidecar distributing enforcement across 10 lifecycle hooks. Combines heuristic and LLM-based scanning with risk accumulation/decay and policy-based tool and network controls. Focus on practical, deployable security for production agent gateways. |
+| [ClawKeeper: Comprehensive Safety Protection for OpenClaw Agents](https://arxiv.org/abs/2603.24414) | arXiv Mar 2026 | Three-layer defense: skill-based policy enforcement (instruction level) → plugin-based runtime monitoring → **decoupled watcher-based security middleware** (real-time intervention without coupling to agent internals). Effective against data leakage and privilege escalation; watcher paradigm proposed as a building block for next-generation agent security. |
+
+---
 
 ### Defense Methods
 
