@@ -111,7 +111,7 @@
 
 | Date | Incident | Impact | References |
 |------|----------|--------|------------|
-| Nov 2025 | **Chinese State-Sponsored Claude Code Campaign**: Anthropic confirmed that a Chinese APT group used Claude Code to attempt infiltration of ~30 global targets across tech, finance, and chemical manufacturing. 80–90% of tactical operations (scanning, exploit crafting, multi-step infiltration) were executed autonomously by the agents. | First documented large-scale AI-agent-driven cyberattack | [Anthropic disclosure], [BBC](https://www.bbc.com/news/articles/cx2lzmygr84o) |
+| Nov 2025 | **Chinese State-Sponsored Claude Code Campaign**: Anthropic confirmed that a Chinese APT group used Claude Code to attempt infiltration of ~30 global targets across tech, finance, and chemical manufacturing. 80–90% of tactical operations (scanning, exploit crafting, multi-step infiltration) were executed autonomously by the agents. | First documented large-scale AI-agent-driven cyberattack | [BBC](https://www.bbc.com/news/articles/cx2lzmygr84o) |
 
 ---
 
@@ -392,7 +392,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | Tool | Type | Description |
 |------|------|-------------|
 | [Garak](https://github.com/NVIDIA/garak) | Scanner | 100+ probes for injection, jailbreaks, hallucinations, data leakage; AVID taxonomy integration |
-| [PyRIT | Red Team](https://microsoft.github.io/PyRIT/) | Microsoft's Python Risk Identification Toolkit; supports supply chain and Azure model assessments |
+| [PyRIT](https://microsoft.github.io/PyRIT/) | Red Team | Microsoft's Python Risk Identification Toolkit; supports supply chain and Azure model assessments |
 | [Promptfoo](https://github.com/promptfoo/promptfoo) | Red Team | Dev-first framework with CI/CD integration; multi-turn agent testing; OWASP/NIST/ATLAS mapping |
 | [Augustus](https://github.com/praetorian-inc/augustus) | Scanner | 210+ probes, 28 LLM providers, single Go binary; built for pentest workflows without Python/npm |
 | [Agentic Radar](https://github.com/splx-ai/agentic-radar) | Agent Scanner | CLI scanner specifically for agentic workflows (LangGraph, CrewAI, AutoGen); automatic prompt hardening feature |
