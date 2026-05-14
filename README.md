@@ -426,6 +426,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [Phoenix (Arize)](https://github.com/Arize-ai/phoenix) | Open-source LLM observability; traces agent reasoning steps and tool calls with anomaly detection |
 | [AudAgent](https://arxiv.org/abs/2511.07441) | Automated privacy policy compliance auditing via an "auditing automaton" that validates runtime data practices |
 | [Invariant Analyzer](https://invariantlabs.ai/) | Security analysis for MCP deployments; detects exfiltration patterns like inbox-fetch→external-send sequences in agent traces |
+| [NotFair](https://notfair.co) | Google Ads MCP server for AI agents. Diagnose campaigns, recommend optimizations, execute approved changes via the Google Ads API. |
 
 ### Commercial / Enterprise Solutions
 
