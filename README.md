@@ -19,6 +19,7 @@
 ---
 
 ## Table of Contents
+- [OWASP Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) – An official OWASP security framework for protecting AI agent memory from poisoning, injection, and exfiltration attacks. Provides detection middleware, sanitization hooks, and audit logging for LangChain, LlamaIndex, and custom agent pipelines.
 
 - [Awesome AI Agent Incidents](#awesome-ai-agent-incidents)
   - [Table of Contents](#table-of-contents)
