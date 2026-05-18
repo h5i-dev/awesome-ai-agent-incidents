@@ -381,6 +381,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [LLM Guard](https://github.com/protectai/llm-guard) | Protect AI | Self-hosted input/output scanner; detects injection, secrets, PII, toxicity; low-latency production deployment |
 | [Rebuff](https://github.com/protectai/rebuff) | Protect AI | Self-hardening prompt injection detector with canary token support; learns from attempted bypasses *(archived May 2025 — no longer actively maintained)* |
 | [Invariant Analyzer](https://github.com/invariantlabs-ai/invariant) | Invariant Labs | Rule-based guardrailing for LLM/MCP agent traces; Python-inspired matching language for detecting malicious tool sequences |
+| [APort Agent Guardrails](https://github.com/aporthq/aport-agent-guardrails) | APort | Pre-action authorization for AI agent tool calls using Open Agent Passport policies; blocks risky actions before execution and records allow/deny decisions |
 | [Vigil LLM](https://github.com/deadbits/vigil-llm) | deadbits | Composable scanners: vector similarity, YARA rules, transformer classifier, canary token detection, sentiment analysis |
 | [InjecGuard / PIGuard](https://github.com/leolee99/PIGuard) | Open Source | +30.8% over prior SOTA on NotInject benchmark; specifically addresses overdefense false positives |
 | [Sentinel AI](https://github.com/MaxwellCalkin/sentinel-ai) | Open Source | 12-language sub-millisecond injection detection; detects base64/hex/ROT13/homoglyph obfuscation; includes MCP safety proxy |
