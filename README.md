@@ -387,6 +387,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [openclaw-bastion](https://github.com/AtlasPA/openclaw-bastion) | AtlasPA | Detects system prompt markers, role overrides, Unicode homoglyphs, zero-width chars, HTML comment injection; zero dependencies |
 | [ShellWard](https://github.com/jnMetaCode/shellward) | Open Source | 8-layer agent security middleware; blocks prompt injection, exfiltration, and dangerous commands; zero dependencies |
 | [AprielGuard](https://huggingface.co/blog/ServiceNow-AI/aprielguard) | ServiceNow AI | 8B parameter safety–security safeguard model with strong performance on injection and jailbreak detection |
+| [ai-evaluation](https://github.com/future-agi/ai-evaluation) | Future AGI | Open-source LLM evaluation framework with 50+ metrics, LLM-as-Judge augmentation, and guardrail scanners (jailbreak, PII, prompt-injection); AutoEval pipelines with CI/CD support |
 
 ### Red Teaming & Scanning
 
@@ -427,6 +428,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [AudAgent](https://arxiv.org/abs/2511.07441) | Automated privacy policy compliance auditing via an "auditing automaton" that validates runtime data practices |
 | [Invariant Analyzer](https://invariantlabs.ai/) | Security analysis for MCP deployments; detects exfiltration patterns like inbox-fetch→external-send sequences in agent traces |
 | [NotFair](https://notfair.co) | Google Ads MCP server for AI agents. Diagnose campaigns, recommend optimizations, execute approved changes via the Google Ads API. |
+| [traceAI](https://github.com/future-agi/traceAI) | Open-source OpenTelemetry-native tracing for LLM and agent apps. Auto-instruments 50+ frameworks across Python, TypeScript, Java, and C# (OpenAI, Anthropic, LangChain, LlamaIndex, CrewAI, Bedrock). No vendor lock-in |
 
 ### Commercial / Enterprise Solutions
 
