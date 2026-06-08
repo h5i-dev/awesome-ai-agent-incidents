@@ -418,6 +418,12 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [OpenPromptInjection](https://github.com/liu00222/Open-Prompt-Injection) | Benchmark for prompt injection attacks and defenses across diverse agent scenarios |
 | [Damn Vulnerable MCP Server](https://github.com/harishsg993010/damn-vulnerable-MCP-server) | Deliberately vulnerable MCP server for security education and testing |
 
+### Agent Identity & Trust Verification
+
+| Tool | Maintainer | Description |
+|------|------------|-------------|
+| [TWZRD Agent Intel](https://intel.twzrd.xyz) | TWZRD | On-chain trust scoring for AI agents on Solana. `score_agent(wallet)` returns a behavioral trust score; `preflight_check(wallet)` gives a go/no-go before agent-to-agent transactions. Free streamable-HTTP MCP server — no API key required. Config: `{"mcpServers":{"twzrd-agent-intel":{"url":"https://intel.twzrd.xyz/mcp"}}}` |
+
 ### Observability & Tracing
 
 | Tool | Description |
