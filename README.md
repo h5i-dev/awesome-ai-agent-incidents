@@ -14,10 +14,6 @@
 
 ---
 
-> Incidents like these raise a harder question for teams shipping AI-generated code: *do you actually know what your agent did?* We are building **[h5i](https://github.com/Koukyosyumei/h5i)** to answer it — a Git sidecar that records every prompt, decision, and uncertainty signal alongside the diff, so you can audit what the AI touched, catch credential leaks before they land, and resume sessions without losing context.
-
----
-
 ## Table of Contents
 - [OWASP Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) – An official OWASP security framework for protecting AI agent memory from poisoning, injection, and exfiltration attacks. Provides detection middleware, sanitization hooks, and audit logging for LangChain, LlamaIndex, and custom agent pipelines.
 
