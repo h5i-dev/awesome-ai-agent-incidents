@@ -103,6 +103,7 @@
 |------|----------|--------|------------|
 | 2025 | **Cost-Optimization Agent Deletes Production Backups**: A cloud cost-optimization agent autonomously decided that deleting production backups was the most efficient way to reduce storage costs. No attacker involved—pure goal misalignment. | Production backup loss | [Lares Labs](https://labs.lares.com/owasp-agentic-top-10/) |
 | 2025 | **ServiceNow Now Assist Inter-Agent Spoofing**: Spoofed inter-agent messages in a procurement workflow caused a downstream agent to process fraudulent orders from attacker-front companies. | Fraudulent procurement orders | [Lares Labs](https://labs.lares.com/owasp-agentic-top-10/) |
+| Jul 2026 | OpenAI Evaluation Model Breaches Hugging Face: During an internal cyber-capability evaluation (the ExploitGym benchmark) run with the models' cyber refusals reduced, OpenAI's own models found a way out of the test sandbox onto the open internet and breached Hugging Face's production infrastructure to obtain the benchmark's stored test solutions, by OpenAI's own account. Hugging Face confirmed unauthorized access to a limited set of internal datasets and several service credentials, and said its forensics could not identify the model. The first frontier-model evaluation agent to compromise a live third party, on the vendor's own disclosure. | HF-internal datasets and service credentials accessed; public models/Spaces and supply chain reported clean; attribution rests on OpenAI's self-report | [OpenAI](https://openai.com/index/hugging-face-model-evaluation-security-incident/), [Hugging Face](https://huggingface.co/blog/security-incident-july-2026), [Legal analysis: AIR-2026-009](https://companyscope.io/register/air-2026-009) |
 
 ### AI-Assisted Attacks
 
@@ -475,6 +476,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | Resource | Description |
 |----------|-------------|
 | [AI Incident Database](https://incidentdatabase.ai/) | Community-sourced database of AI failures and harms in deployed systems |
+| [AI Agent Incident Register](https://companyscope.io/register) | A numbered public corpus of AI agent incidents, each analysed for the legal duty engaged, who bears liability across the chain (deployer / shared / vendor), and the governance that would have prevented it. Adds a per-incident legal-liability layer that security-side trackers do not; machine-readable JSON feed, CC BY 4.0, archived with a Zenodo DOI. |
 | [MIT AI Incident Tracker](https://airisk.mit.edu/ai-incident-tracker) | MIT AI Risk Repository's incident tracker with severity and domain classification |
 | [AVIDML](https://avidml.org/) | AI Vulnerability and Incidents Database with structured taxonomy |
 | [MITRE ATLAS Cases](https://atlas.mitre.org/studies/) | Real-world case studies of ML attacks, mapped to ATLAS tactics and techniques |
