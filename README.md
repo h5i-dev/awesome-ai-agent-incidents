@@ -384,6 +384,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [openclaw-bastion](https://github.com/AtlasPA/openclaw-bastion) | AtlasPA | Detects system prompt markers, role overrides, Unicode homoglyphs, zero-width chars, HTML comment injection; zero dependencies |
 | [ShellWard](https://github.com/jnMetaCode/shellward) | Open Source | 8-layer agent security middleware; blocks prompt injection, exfiltration, and dangerous commands; zero dependencies |
 | [AprielGuard](https://huggingface.co/blog/ServiceNow-AI/aprielguard) | ServiceNow AI | 8B parameter safety–security safeguard model with strong performance on injection and jailbreak detection |
+| [GATRA](https://github.com/gatra-io/gatra) | gatra-io | Zero-Trust security reverse proxy enforcing Ed25519 authorization, CEL policy evaluation, stateful budget caps, and ephemeral task directives for AI agents and MCP servers |
 
 ### Red Teaming & Scanning
 
