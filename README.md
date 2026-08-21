@@ -385,6 +385,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [ShellWard](https://github.com/jnMetaCode/shellward) | Open Source | 8-layer agent security middleware; blocks prompt injection, exfiltration, and dangerous commands; zero dependencies |
 | [AprielGuard](https://huggingface.co/blog/ServiceNow-AI/aprielguard) | ServiceNow AI | 8B parameter safety–security safeguard model with strong performance on injection and jailbreak detection |
 | [GATRA](https://github.com/gatra-io/gatra) | gatra-io | Zero-Trust security reverse proxy enforcing Ed25519 authorization, CEL policy evaluation, stateful budget caps, and ephemeral task directives for AI agents and MCP servers |
+| [MandateGuard](https://github.com/ezequiellich44-cmd/MandateGuard) | MandateGuard | Deterministic payment policy enforcement for AI agents: pre-action gate enforcing budgets, allowlists, denylists, rate limits, and signed Ed25519 payment mandates with zero LLM in the decision path (reproducible verdicts). Tamper-evident SHA-256 chained audit ledger; official MCP server on the Model Context Protocol Registry |
 
 ### Red Teaming & Scanning
 
