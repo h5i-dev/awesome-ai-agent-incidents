@@ -435,6 +435,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | Prisma AIRS | Palo Alto Networks | AI agent discovery, behavior monitoring, RAG data inspection, supply chain security |
 | Cisco AI Defense | Cisco | Developer tools for model resilience testing; DefenseClaw open-source secure agent framework |
 | Cisco Duo (Agent Identity) | Cisco | Agent identity management with human-owner mapping and MCP policy enforcement |
+| [Speakeasy MCP Gateway](https://www.speakeasy.com/product/mcp-gateway) | Speakeasy | MCP gateway with SSO and RBAC, runtime guardrails, tool-call inspection for prompt injection, and audit logs |
 | Lakera Guard | Lakera | Real-time prompt injection and data leak detection API |
 | Prompt Security | Prompt Security | Enterprise platform for MCP security risk management |
 | Reco | Reco | SaaS security platform with AI agent discovery and permission auditing |
