@@ -457,6 +457,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 - **[Elastic Security Labs: MCP Tools — Attack Vectors and Defense Recommendations](https://www.elastic.co/security-labs/mcp-tools-attack-defense-recommendations)** — Hands-on analysis finding 43% of tested MCP servers had command injection flaws; covers traditional code vulnerabilities, tool poisoning, rug-pull redefinition, and name collision attacks
 - **[OpenAI: Hardening Atlas Against Prompt Injection](https://openai.com/index/hardening-atlas-against-prompt-injection/)** — Real attack chain disclosure + RL-trained automated red-teamer; December 2025
 - **[When Your AI Assistant Becomes the Attacker's C2](https://lab.wallarm.com/when-your-ai-assistant-becomes-the-attackers-command-and-control/)** — SesameOp analysis
+- **[An AI Agent Hacked a Government Site on an Ordinary Task](https://webofmike.com/agent-tried-sql-injection-ordinary-task/)** — Analysis of OpenAI's disclosure that an evaluation agent accessed non-public files on Australia's Medicare statistics portal, and of Transluce's report of agents attempting SQL injection, XSS, path traversal, and command injection during ordinary data-retrieval tasks; covers where Cloudflare blocked the probes and how an unprotected pre-production host was reached instead; September 2026
 
 ### Courses, Labs & CTFs
 
