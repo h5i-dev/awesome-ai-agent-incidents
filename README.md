@@ -484,6 +484,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [MIT AI Incident Tracker](https://airisk.mit.edu/ai-incident-tracker) | MIT AI Risk Repository's incident tracker with severity and domain classification |
 | [AVIDML](https://avidml.org/) | AI Vulnerability and Incidents Database with structured taxonomy |
 | [MITRE ATLAS Cases](https://atlas.mitre.org/studies/) | Real-world case studies of ML attacks, mapped to ATLAS tactics and techniques |
+| [Orca AI Incident Archive](https://github.com/Continuum-AI-Corp/Orca-AI-Incident-Archive) | Open (CC BY 4.0) database of 354 AI agent security records, 2025-01 to 2026-09, each with at least one primary source and flags for confirmed real-world harm, AI-involvement status (confirmed / disputed / unverified) and record kind (incident, vulnerability, research, report, policy); JSON/CSV exports |
 
 ---
 
