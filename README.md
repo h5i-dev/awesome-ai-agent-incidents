@@ -412,6 +412,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [MCPTox](https://arxiv.org/abs/2508.14925) | 45 live MCP servers, 353 tools, 1,312 malicious test cases across 10 risk categories |
 | [AgentDojo](https://github.com/ethz-spylab/agentdojo) | Dynamic environment for evaluating attacks and defenses for LLM agents |
 | [JailbreakBench](https://github.com/JailbreakBench/jailbreakbench) | Open robustness benchmark for jailbreaking (NeurIPS 2024) |
+| [hermes-jailbench](https://github.com/hermes-labs-ai/hermes-jailbench) | Repeatable known-pattern jailbreak regression benchmark with deterministic refusal, partial, and compliance classification for authorized model endpoints |
 | [AIRTBench](https://github.com/dreadnode/AIRTBench-Code) | Measuring autonomous AI red-teaming capabilities in language models |
 | [ISC-Bench](https://github.com/wuyoscar/ISC-Bench) | Internal Safety Collapse benchmark: jailbreaks frontier models via normal task completion, no adversarial prompting |
 | [AgentDoG](https://github.com/AI45Lab/AgentDoG) | Trajectory-level risk assessment framework for autonomous agents |
