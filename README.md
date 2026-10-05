@@ -481,6 +481,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 |----------|-------------|
 | [AI Incident Database](https://incidentdatabase.ai/) | Community-sourced database of AI failures and harms in deployed systems |
 | [AI Agent Incident Register](https://companyscope.io/register) | A numbered public corpus of AI agent incidents, each analysed for the legal duty engaged, who bears liability across the chain (deployer / shared / vendor), and the governance that would have prevented it. Adds a per-incident legal-liability layer that security-side trackers do not; machine-readable JSON feed, CC BY 4.0, archived with a Zenodo DOI. |
+| [AI Agent Spending Incidents Log](https://github.com/Pink-Agentic-Payments/agent-spending-incidents) | 10 sourced, dated incidents (2024-2026) where an AI agent overspent, paid the wrong party, was manipulated into a payment, or leaked payment credentials. CSV with category, confidence level, and the control that would most directly have prevented each case. CC BY 4.0. |
 | [MIT AI Incident Tracker](https://airisk.mit.edu/ai-incident-tracker) | MIT AI Risk Repository's incident tracker with severity and domain classification |
 | [AVIDML](https://avidml.org/) | AI Vulnerability and Incidents Database with structured taxonomy |
 | [MITRE ATLAS Cases](https://atlas.mitre.org/studies/) | Real-world case studies of ML attacks, mapped to ATLAS tactics and techniques |
