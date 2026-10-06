@@ -372,6 +372,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 
 | Tool | Maintainer | Description |
 |------|------------|-------------|
+| [affixio-agent-guard](https://github.com/AffixIO/affixio-agent-guard) | AffixIO | Free local-first guard for LLM agents; checks tool calls against policy BEFORE execution (TypeScript, zero deps, zero network). Pairs with AffixIO host-side ACTION attestation ([affixio](https://www.npmjs.com/package/affixio)) |
 | [LlamaFirewall](https://github.com/meta-llama/PurpleLlama/tree/main/LlamaFirewall) | Meta | Multi-layer runtime protection: PromptGuard 2 (injection/jailbreak), Agent Alignment Checks (CoT auditor), CodeShield (dangerous code detection in agent outputs) |
 | [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) | NVIDIA | Programmable topical/safety/dialog rails for LLM-based systems; composable with LangChain/LlamaIndex |
 | [Guardrails AI](https://github.com/guardrails-ai/guardrails) | Guardrails AI | Python framework with 50+ validators for PII, schema conformance, injection, toxicity; structured output enforcement |
