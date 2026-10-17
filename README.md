@@ -292,6 +292,7 @@ Key techniques relevant to AI agents:
 | [CoSAI](https://www.cosai.dev/) | Cross-industry collaboration on AI security standards (model signing, MCP security, zero trust for AI) |
 | [AVIDML Taxonomy](https://avidml.org/taxonomy/) | AI Vulnerability and Incidents Database taxonomy |
 | [MIT AI Risk Repository](https://airisk.mit.edu/) | Comprehensive repository of AI risk categories |
+| [AVE (Agentic Vulnerability Enumeration)](https://github.com/aveproject/ave) | Open standard assigning stable IDs to behavioral vulnerability classes in agentic AI components (MCP servers, agent skills, LLM plugins), scored with OWASP's AIVSS framework |
 
 ---
 
