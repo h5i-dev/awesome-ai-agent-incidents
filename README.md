@@ -493,6 +493,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [PurpleLlama](https://github.com/meta-llama/PurpleLlama) | Red Team | Meta's set of tools to assess and improve LLM security |
 | [ART (Linux Foundation AI)](https://github.com/Trusted-AI/adversarial-robustness-toolbox) | Defense/Attack | Comprehensive library for evasion, poisoning, extraction, and inference attacks on ML models |
 | [h5i](https://github.com/h5i-dev/h5i) | Red Team / Workspace | Agent-native web security workspace: agents drive a browser, capture and mutate HTTP traffic, replay requests, and crawl apps (incl. JS-discovered endpoints); confirmed attack flows can be saved as CI regression tests; confined sandboxes for running untrusted or agent-written code; `h5i-app` Rust framework whose authorization and data-isolation logic can be proven in Lean 4 via Aeneas |
+| [Ironheights](https://github.com/Frank-Masciopinto/ironheights) | Skill Scanner | Local, pre-install static scanner for OpenClaw/ClawHub agent skills (SKILL.md and bundled files): flags instruction override, hidden text, credential reads, exfiltration, remote-exec installs and persistence; adds baseline integrity pinning and quarantine; SARIF output, no telemetry, Apache-2.0 |
 
 ### Benchmarks & Evaluations
 
