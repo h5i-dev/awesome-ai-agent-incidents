@@ -530,6 +530,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | Reco | Reco | SaaS security platform with AI agent discovery and permission auditing |
 | MCP Manager | MCP Manager | MCP gateway with tool metadata scanning, rug pull detection, permission management |
 | Kubescape 4.0 / KAgent | ARMO (CNCF) | Kubernetes security with AI agent scanning support |
+| [Speakeasy control plane](https://www.speakeasy.com/) | Speakeasy | MCP tool access governed by identity-based permissions and per-action security policies, with audit logs for investigation |
 
 ---
 
