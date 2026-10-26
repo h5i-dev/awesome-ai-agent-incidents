@@ -492,7 +492,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [AgentSeal](https://github.com/agentseal/agentseal) | Scanner | 225+ attack probes (82 extraction + 143 injection) for prompt injection and extraction; supports OpenAI, Anthropic, Ollama, any HTTP endpoint |
 | [PurpleLlama](https://github.com/meta-llama/PurpleLlama) | Red Team | Meta's set of tools to assess and improve LLM security |
 | [ART (Linux Foundation AI)](https://github.com/Trusted-AI/adversarial-robustness-toolbox) | Defense/Attack | Comprehensive library for evasion, poisoning, extraction, and inference attacks on ML models |
-| [h5i](https://github.com/h5i-dev/h5i) | Red Team / Workspace | Agent-native web security workspace: agents drive a browser, capture and mutate HTTP traffic, replay requests, and crawl apps (incl. JS-discovered endpoints); confirmed attack flows can be saved as CI regression tests; confined sandboxes for running untrusted or agent-written code; `h5i-app` Rust framework whose authorization and data-isolation logic can be proven in Lean 4 via Aeneas |
+| [h5i](https://github.com/h5i-dev/h5i) | Verified Web Framework / Red Team | Axum-based Rust web framework (`h5i-app`) built around a verifiable application kernel: application logic is translated into Lean 4 via Aeneas so properties such as authorization and data isolation can be proven, with optional GPU execution of kernels. Ships a framework-independent CLI for AI agents: browser automation, HTTP capture/mutation/replay, endpoint recon, security regression tests in CI with API coverage gates, confined sandboxes for agent-written code, and a local dashboard |
 
 ### Benchmarks & Evaluations
 
