@@ -463,6 +463,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [LlamaFirewall](https://github.com/meta-llama/PurpleLlama/tree/main/LlamaFirewall) | Meta | Multi-layer runtime protection: PromptGuard 2 (injection/jailbreak), Agent Alignment Checks (CoT auditor), CodeShield (dangerous code detection in agent outputs) |
 | [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails) | NVIDIA | Programmable topical/safety/dialog rails for LLM-based systems; composable with LangChain/LlamaIndex |
 | [Guardrails AI](https://github.com/guardrails-ai/guardrails) | Guardrails AI | Python framework with 50+ validators for PII, schema conformance, injection, toxicity; structured output enforcement |
+| [HOL Guard](https://github.com/hashgraph-online/hol-guard) | HOL | Apache-2.0 local-first policy and approval checks for supported AI-agent tool actions; scans plugins, skills, and MCP configuration for threats. |
 | [LLM Guard](https://github.com/protectai/llm-guard) | Protect AI | Self-hosted input/output scanner; detects injection, secrets, PII, toxicity; low-latency production deployment |
 | [Rebuff](https://github.com/protectai/rebuff) | Protect AI | Self-hardening prompt injection detector with canary token support; learns from attempted bypasses *(archived May 2025 — no longer actively maintained)* |
 | [Invariant Analyzer](https://github.com/invariantlabs-ai/invariant) | Invariant Labs | Rule-based guardrailing for LLM/MCP agent traces; Python-inspired matching language for detecting malicious tool sequences |
