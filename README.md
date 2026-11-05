@@ -494,6 +494,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [PurpleLlama](https://github.com/meta-llama/PurpleLlama) | Red Team | Meta's set of tools to assess and improve LLM security |
 | [ART (Linux Foundation AI)](https://github.com/Trusted-AI/adversarial-robustness-toolbox) | Defense/Attack | Comprehensive library for evasion, poisoning, extraction, and inference attacks on ML models |
 | [h5i](https://github.com/h5i-dev/h5i) | Verified Web Framework / Red Team | Axum-based Rust web framework (`h5i-app`) built around a verifiable application kernel: application logic is translated into Lean 4 via Aeneas so properties such as authorization and data isolation can be proven, with optional GPU execution of kernels. Ships a framework-independent CLI for AI agents: browser automation, HTTP capture/mutation/replay, endpoint recon, security regression tests in CI with API coverage gates, confined sandboxes for agent-written code, and a local dashboard |
+| [whatileaked](https://github.com/selan-ai/whatileaked) | Secret Scanner | Scans local Claude Code, Codex and Cursor transcripts for credentials already sent to the model, using the gitleaks rule set; no network, zero dependencies |
 
 ### Benchmarks & Evaluations
 
