@@ -563,6 +563,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 | [Damn Vulnerable LLM Agent](https://github.com/ReversecLabs/damn-vulnerable-llm-agent) | Lab | LangChain-based ReAct agent with intentionally exploitable injection paths; lets you observe how hijacked thoughts propagate through the agent loop |
 | [Damn Vulnerable MCP Server](https://github.com/harishsg993010/damn-vulnerable-MCP-server) | Lab | Deliberately vulnerable MCP server for learning MCP pentesting |
 | [vulnerable-mcp-servers-lab](https://github.com/appsecco/vulnerable-mcp-servers-lab) | Lab | Collection of vulnerable MCP servers by Appsecco |
+| [Memory Poisoning Lab](https://github.com/RishabhPande/memory-poison-lab) | Lab | MIT local teaching range for memory poisoning, provenance-aware recall and repair limits across reference, ChromaDB and sqlite-vec backends; synthetic targets and scripted agent, not measured LLM safety |
 | [Microsoft AI Red Teaming Playground](https://github.com/microsoft/AI-Red-Teaming-Playground-Labs) | Lab | Microsoft's AI red teaming training infrastructure |
 | [ai-prompt-ctf](https://github.com/c-goosen/ai-prompt-ctf) | CTF | Targets the full agentic stack: RAG retrieval, function calling, and ReAct loops — covers indirect injection paths most CTFs skip |
 | [OWASP WrongSecrets LLM](https://wrongsecrets.herokuapp.com/challenge/32) | Lab | OWASP's LLM security challenge (link may be unavailable) |
