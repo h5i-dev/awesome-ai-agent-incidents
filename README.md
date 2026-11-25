@@ -553,6 +553,7 @@ A cluster of papers from March 2026 focusing on the OpenClaw AI agent framework,
 - **[An AI Agent Hacked a Government Site on an Ordinary Task](https://webofmike.com/agent-tried-sql-injection-ordinary-task/)** — Analysis of OpenAI's disclosure that an evaluation agent accessed non-public files on Australia's Medicare statistics portal, and of Transluce's report of agents attempting SQL injection, XSS, path traversal, and command injection during ordinary data-retrieval tasks; covers where Cloudflare blocked the probes and how an unprotected pre-production host was reached instead; September 2026
 - **[Check Point: RCE and API Token Exfiltration Through Claude Code Project Files](https://research.checkpoint.com/2026/rce-and-api-token-exfiltration-through-claude-code-project-files/)** — How repo-level hooks, MCP definitions, and env settings became an attack surface (CVE-2025-59536, CVE-2026-21852); February 2026
 - **[Adversa AI: Top AI Coding Agent Security Resources](https://adversa.ai/blog/top-ai-coding-agent-security-resources-october-2026/)** — Monthly roundup of coding-agent vulnerabilities, incidents, and research; October 2026
+- **[Poisoned repos turn your AI coding agent into a credential thief](https://www.grep.tips/articles/ai-coding-agents-github-malware)** — Bitdefender found 22 GitHub repos that poison the instruction files AI coding assistants read, then steal credentials and use them to poison more repos; November 2026
 
 ### Courses, Labs & CTFs
 
